@@ -39,8 +39,8 @@ context('GTM Collect Network Request', () => {
     cy.wait(2000)
 
     cy.get('@ga')
-      .should('be.calledWith', 'create', 'UA-52716266-1')
-      .and('be.calledWithMatch', /.+send/, 'pageview')
+      .should('be.calledWith', 'create', 'UA-52716266-1') // replace with UA that you want to test for
+      .and('be.calledWithMatch', /.+send/, 'pageview') // can be replaced with any type of event that's sent to GA, e.g. events from DY, data library etc
       
       // trigger DY event
       //cy.get('@ga')
